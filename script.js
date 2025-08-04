@@ -1,65 +1,61 @@
-// function sapa(nama) {
-//     console.log("Halo, " + nama + "!");
-// }
+// // function Car(name, model, color, weight) {
+// //     this.name = name;
+// //     this.model = model;
+// //     this.color = color;
+// //     this.weight = weight;
 
-// sapa("joy");
-// sapa("seulgi");
+// //     this.start = function() {
+// //         console.log(`${this.name} Dinyalakan..`);
+// //     };
+// //     this.drive = function() {
+// //         console.log(`${this.name} Sedang Berjalan.`);
+// //     };
+// // }
 
-// function agus() {
-//     console.log("Bau");
-// }
+// // let car1 = new Car("Toyota", 2020, "blue", "1000Kg");
+// // let car2 = new Car("Honda", 2021, "red", "950Kg");
 
-// agus();
+// // car1.start();
+// // car2.drive();
 
-// function tambah(a, b) {
-//     return a - b;
-// }
-
-// let hasil = tambah(5, 3);
-// console.log("Hasil : " + hasil);
-
-// let car = {
-//     name: "Fiat",
-//     model: 500,
-//     weight: "850kg",
-//     color: "White",
-
-//     start: function() {
-//         console.log("Mobil Dinyalakan.");
-//     },
-//     drive: function() {
-//         console.log("Mobil Berjalan.");
-//     },
-//     brake: function() {
-//         console.log("Mobil Mengerem.");
-//     },
-//     stop: function() {
-//         console.log("Mobil Berhenti.");
+// class Car {
+//     constructor(name, model, color) {
+//         this.name = name;
+//         this.model = model;
+//         this.color = color;
 //     }
-// };
 
-// console.log(car.name);
-// console.log(car.color);
+//     start() {
+//         console.log(`${this.name} Dinyalakan`);
+//     }
 
-// car.start();
-// car.drive();
+//     drive() {
+//         console.log(`${this.name} Berjalan`);
+//     }
+// }
 
-let sepeda = {
-    merk: "Unity",
-    gigi: 21,
-    warna: "Putih",
+// let car1 = new Car("Toyota", 2021, "Blue")
 
-    start: function () {
-        console.log("Sepeda Bergersk");
-    },
-    brake: function () {
-        console.log("Sepeda Berhenti")
+// car1.start();
+
+class Student {
+    constructor(name, nim, department, year) {
+        this.name = name;
+        this.nim = nim;
+        this.department = department;
+        this.year = year;
     }
-};
 
-console.log(sepeda.merk);
-console.log(sepeda.gigi);
-console.log(sepeda.warna);
+    introduce() {
+        console.log(`Halo, saya ${this.name}, mahasiswa ${this.department} angkatan ${this.year}`);
+    }
 
-sepeda.start();
-sepeda.brake();
+    isSenior() {
+        return this.year < 2025;
+    }
+}
+
+let mahasiswa1 = new Student("Rasy", "123456789", "Informatika", 2023);
+
+mahasiswa1.introduce();  
+console.log(mahasiswa1.isSenior()); 
